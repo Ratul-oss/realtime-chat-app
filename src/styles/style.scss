@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+$mainColor: rgb(255, 0, 119);
+
+::selection {
+  background: $mainColor;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 100;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.212),
+      rgba(255, 255, 255, 0.247)
+    ),
+    url(../img/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container {
+  width: 950px;
+  margin: auto;
+}
+
+// the login page
+.login_page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: rgb(233, 233, 233);
+  .login_container {
+    width: 400px;
+    box-shadow: 1px 2px 5px rgb(129, 129, 129);
+    background: white;
+    margin: 10px auto;
+    padding: 20px 10px;
+    border-radius: 5px;
+    text-align: center;
+    .login_image {
+      width: 150px;
+      margin: 5px auto;
+      img {
+        width: 100%;
+      }
+    }
+    h2 {
+      font-size: 1.9rem;
+      color: $mainColor;
+      padding: 5px 0px;
+    }
+    p {
+      color: rgb(77, 77, 77);
+      padding: 5px 0px;
+    }
+    .login_button {
+      margin: 10px 0px;
+      button {
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+}
+
+// this main is containing all the element under the chat.js component/page
+main {
+  height: 100vh;
+  max-height: 100vh;
+  width: 100vw;
+  max-width: 100vw;
+}
+
+// the nav compoent in the chat.js
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background: $mainColor;
+  padding: 5px 0px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  min-height: 10vh;
+  .nav_title {
+    font-family: "Dancing Script", cursive;
+    color: #fff;
+  }
+  .nav_item {
+    li {
+      list-style: none;
+      img {
+        width: 55px;
+        border-radius: 100%;
+        cursor: pointer;
+        border: 2px solid #fff;
+      }
+    }
+  }
+
+  .userInfos {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background: $mainColor;
+    box-shadow: 1px 2px 10px rgb(117, 117, 117);
+    transition: 0.4s;
+    transform: translateX(-100%);
+    padding: 10px;
+    .closebutton {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 10px;
+    }
+    h2 {
+      color: white;
+      text-align: center;
+      padding: 5px;
+    }
+    li {
+      list-style: none;
+      margin: 5px 0px;
+      color: white;
+      img {
+        width: 80px;
+        border-radius: 100%;
+        margin: 10px 0px;
+      }
+    }
+  }
+  .nav_active {
+    transform: translateX(0);
+  }
+}
+
+.users_message {
+  margin-left: auto !important;
+  background: linear-gradient(45deg, $mainColor, rgb(212, 0, 255)) !important;
+  .message_desc {
+    span {
+      color: white !important;
+    }
+  }
+}
+
+// the message area component
+.message {
+  min-height: 80vh;
+  padding: 10px;
+  // overflow-x: hidden;
+  width: 100%;
+  .singlemessage {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    background: #ddd;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 50px;
+    box-shadow: 1px 2px 5px rgb(143, 143, 143);
+    .message_desc {
+      span {
+        color: $mainColor;
+        font-weight: 900;
+        padding: 0px 3px;
+      }
+    }
+    .userImg {
+      width: 50px;
+      margin: 0px 10px;
+      img {
+        width: 100%;
+        border-radius: 100%;
+      }
+    }
+  }
+}
+
+// the message field component
+.message_field {
+  width: 100%;
+  min-height: 10vh;
+  background: $mainColor;
+  position: sticky;
+  bottom: 0;
+  right: 0;
+  margin-bottom: auto;
+  color: white;
+  padding: 5px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-top: 2px solid $mainColor;
+  .MuiInputBase-input {
+    width: 500px;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+  }
+  .send_button {
+    padding: 15px 10px;
+    margin: 0px 5px;
+  }
+}
+
+// * for laptop and ipad's
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 750px;
+  }
+}
+
+// * for mobile devices.
+@media screen and (max-width: 768px) {
+  * {
+    cursor: default !important;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  // the login page
+  .login_page {
+    .login_container {
+      width: 90%;
+    }
+  }
+
+  // the message component
+  .message_field {
+    .TextField {
+      width: 70% !important;
+    }
+    .send_button {
+      width: 10% !important;
+    }
+  }
+
+  // the sub nav
+  .userInfos {
+    width: 80% !important;
+  }
+
+  // single messages
+  .singlemessage {
+    width: 90% !important;
+  }
+}

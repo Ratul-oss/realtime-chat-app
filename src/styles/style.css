@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+::-moz-selection {
+  background: #ff0077;
+}
+
+::selection {
+  background: #ff0077;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 100;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.212), rgba(255, 255, 255, 0.247)), url(../img/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container {
+  width: 950px;
+  margin: auto;
+}
+
+.login_page {
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background: #e9e9e9;
+}
+
+.login_page .login_container {
+  width: 400px;
+  -webkit-box-shadow: 1px 2px 5px #818181;
+          box-shadow: 1px 2px 5px #818181;
+  background: white;
+  margin: 10px auto;
+  padding: 20px 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.login_page .login_container .login_image {
+  width: 150px;
+  margin: 5px auto;
+}
+
+.login_page .login_container .login_image img {
+  width: 100%;
+}
+
+.login_page .login_container h2 {
+  font-size: 1.9rem;
+  color: #ff0077;
+  padding: 5px 0px;
+}
+
+.login_page .login_container p {
+  color: #4d4d4d;
+  padding: 5px 0px;
+}
+
+.login_page .login_container .login_button {
+  margin: 10px 0px;
+}
+
+.login_page .login_container .login_button button {
+  letter-spacing: 0.5px;
+}
+
+main {
+  height: 100vh;
+  max-height: 100vh;
+  width: 100vw;
+  max-width: 100vw;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background: #ff0077;
+  padding: 5px 0px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  min-height: 10vh;
+}
+
+nav .nav_title {
+  font-family: "Dancing Script", cursive;
+  color: #fff;
+}
+
+nav .nav_item li {
+  list-style: none;
+}
+
+nav .nav_item li img {
+  width: 55px;
+  border-radius: 100%;
+  cursor: pointer;
+  border: 2px solid #fff;
+}
+
+nav .userInfos {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #ff0077;
+  -webkit-box-shadow: 1px 2px 10px #757575;
+          box-shadow: 1px 2px 10px #757575;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  padding: 10px;
+}
+
+nav .userInfos .closebutton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+}
+
+nav .userInfos h2 {
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
+
+nav .userInfos li {
+  list-style: none;
+  margin: 5px 0px;
+  color: white;
+}
+
+nav .userInfos li img {
+  width: 80px;
+  border-radius: 100%;
+  margin: 10px 0px;
+}
+
+nav .nav_active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.users_message {
+  margin-left: auto !important;
+  background: linear-gradient(45deg, #ff0077, #d400ff) !important;
+}
+
+.users_message .message_desc span {
+  color: white !important;
+}
+
+.message {
+  min-height: 80vh;
+  padding: 10px;
+  width: 100%;
+}
+
+.message .singlemessage {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 10px;
+  background: #ddd;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 50px;
+  -webkit-box-shadow: 1px 2px 5px #8f8f8f;
+          box-shadow: 1px 2px 5px #8f8f8f;
+}
+
+.message .singlemessage .message_desc span {
+  color: #ff0077;
+  font-weight: 900;
+  padding: 0px 3px;
+}
+
+.message .singlemessage .userImg {
+  width: 50px;
+  margin: 0px 10px;
+}
+
+.message .singlemessage .userImg img {
+  width: 100%;
+  border-radius: 100%;
+}
+
+.message_field {
+  width: 100%;
+  min-height: 10vh;
+  background: #ff0077;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  right: 0;
+  margin-bottom: auto;
+  color: white;
+  padding: 5px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-top: 2px solid #ff0077;
+}
+
+.message_field .MuiInputBase-input {
+  width: 500px;
+  background: white;
+  border-radius: 5px;
+}
+
+.message_field .send_button {
+  padding: 15px 10px;
+  margin: 0px 5px;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  * {
+    cursor: default !important;
+  }
+  .container {
+    width: 100%;
+  }
+  .login_page .login_container {
+    width: 90%;
+  }
+  .message_field .TextField {
+    width: 70% !important;
+  }
+  .message_field .send_button {
+    width: 10% !important;
+  }
+  .userInfos {
+    width: 80% !important;
+  }
+  .singlemessage {
+    width: 90% !important;
+  }
+}
+/*# sourceMappingURL=style.css.map */
