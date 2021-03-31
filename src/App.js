@@ -21,14 +21,16 @@ const App = () => {
   };
 
   useEffect(() => {
-    db.collection("messages").onSnapshot((snapShot) => {
-      let temp = [];
-      temp = snapShot.docs.map((doc) => ({
-        id: doc.id,
-        message: doc.data(),
-      }));
-      setMessage(temp);
-    });
+    db.collection("messages")
+      .orderBy("time", "asc")
+      .onSnapshot((snapShot) => {
+        let temp = [];
+        temp = snapShot.docs.map((doc) => ({
+          id: doc.id,
+          message: doc.data(),
+        }));
+        setMessage(temp);
+      });
   }, []);
 
   return (

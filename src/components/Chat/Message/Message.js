@@ -41,7 +41,8 @@ const Message = ({ message, user }) => {
                             color: "red",
                             background: "white",
                             padding: "3px",
-                            margin: "0px 20px",
+                            margin: "0px 5px",
+                            zIndex: "0",
                           }}
                           aria-label="delete"
                         >
@@ -51,7 +52,11 @@ const Message = ({ message, user }) => {
                     ) : null}
                   </div>
                   <span
-                    style={{ color: "black", textShadow: "1px 1px 2px black" }}
+                    style={{
+                      color: "white",
+                      display: "block",
+                      textAlign: "center",
+                    }}
                   >
                     {data.message.time}, {data.message.date}
                   </span>

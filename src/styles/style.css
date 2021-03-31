@@ -28,10 +28,14 @@ html {
 }
 
 body {
-  background: linear-gradient(45deg, rgba(255, 255, 255, 0.212), rgba(255, 255, 255, 0.247)), url(../img/bg.jpg);
+  background: url(../img/bg.jpg);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -111,6 +115,7 @@ nav {
   top: 0;
   left: 0;
   min-height: 10vh;
+  z-index: 100;
 }
 
 nav .nav_title {
@@ -157,6 +162,7 @@ nav .userInfos {
   transition: 0.4s;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
+  z-index: 100;
   padding: 10px;
 }
 
@@ -217,9 +223,9 @@ nav .nav_active {
   background: #ddd;
   margin-top: 10px;
   margin-bottom: 10px;
-  border-radius: 50px;
-  -webkit-box-shadow: 1px 2px 5px #8f8f8f;
-          box-shadow: 1px 2px 5px #8f8f8f;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 2px 5px #0e0e0e;
+          box-shadow: 1px 2px 5px #0e0e0e;
 }
 
 .message .singlemessage .message_desc span {
@@ -229,12 +235,11 @@ nav .nav_active {
 }
 
 .message .singlemessage .userImg {
-  width: 50px;
   margin: 0px 10px;
 }
 
 .message .singlemessage .userImg img {
-  width: 100%;
+  width: 50px;
   border-radius: 100%;
 }
 
@@ -300,7 +305,7 @@ nav .nav_active {
     width: 80% !important;
   }
   .singlemessage {
-    width: 90% !important;
+    width: 100% !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
