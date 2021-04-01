@@ -128,7 +128,7 @@ nav .nav_item li {
 }
 
 nav .nav_item li img {
-  width: 55px;
+  width: 40px;
   border-radius: 100%;
   cursor: pointer;
   border: 2px solid #fff;
@@ -164,6 +164,7 @@ nav .userInfos {
           transform: translateX(-100%);
   z-index: 100;
   padding: 10px;
+  overflow: hidden;
 }
 
 nav .userInfos .closebutton {
@@ -290,7 +291,7 @@ nav .nav_active {
     cursor: default !important;
   }
   .container {
-    width: 100%;
+    width: 95%;
   }
   .login_page .login_container {
     width: 90%;
@@ -306,6 +307,21 @@ nav .nav_active {
   }
   .singlemessage {
     width: 100% !important;
+  }
+  .message {
+    height: 70vh;
+  }
+  nav {
+    height: 15vh;
+  }
+  .message_field {
+    height: 15vh;
+  }
+}
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  body {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */

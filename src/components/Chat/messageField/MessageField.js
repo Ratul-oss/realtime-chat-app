@@ -18,6 +18,7 @@ const MessageField = ({ input, setInput, user }) => {
       time: new Date().toLocaleTimeString(),
       date: new Date().toLocaleDateString(),
       avatar: photoURL,
+      dateAndTime: new Date().toString(),
     });
     setInput("");
   };

@@ -22,7 +22,7 @@ const App = () => {
 
   useEffect(() => {
     db.collection("messages")
-      .orderBy("time", "asc")
+      .orderBy("dateAndTime", "asc")
       .onSnapshot((snapShot) => {
         let temp = [];
         temp = snapShot.docs.map((doc) => ({

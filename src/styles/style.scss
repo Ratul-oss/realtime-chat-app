@@ -109,7 +109,7 @@ nav {
     li {
       list-style: none;
       img {
-        width: 55px;
+        width: 40px;
         border-radius: 100%;
         cursor: pointer;
         border: 2px solid #fff;
@@ -134,6 +134,7 @@ nav {
     transform: translateX(-100%);
     z-index: 100;
     padding: 10px;
+    overflow: hidden;
     .closebutton {
       position: absolute;
       top: 0;
@@ -245,7 +246,7 @@ nav {
   }
 
   .container {
-    width: 100%;
+    width: 95%;
   }
 
   // the login page
@@ -273,5 +274,22 @@ nav {
   // single messages
   .singlemessage {
     width: 100% !important;
+  }
+
+  // for the fixed height in every device
+  .message {
+    height: 70vh;
+  }
+  nav {
+    height: 15vh;
+  }
+  .message_field {
+    height: 15vh;
+  }
+
+  @media screen and (orientation: landscape) {
+    body {
+      display: none;
+    }
   }
 }
