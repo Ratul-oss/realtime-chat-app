@@ -18,7 +18,7 @@ const Nav = ({ user, logOut }) => {
   return (
     <>
       <nav>
-        <h2 className="nav_title">DevR - Messenger</h2>
+        <h2 className="nav_title">Chat</h2>
         <ul className="nav_item">
           <li>
             <img onClick={OpenNav} src={photoURL} alt={displayName} />
